@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myMobileApp.App">
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#024554</Color>
+            <Color x:Key="ColorText">Black</Color>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="#332196F3" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+            <LinearGradientBrush x:Key="ButtonStyle" EndPoint="1,0">
+                <GradientStop Color="Beige" Offset="0.1"></GradientStop>
+                <GradientStop Color="#2196F3" Offset="1.0"></GradientStop>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="ListWhiteRed" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#ffffff" Offset="0.5" />
+                <GradientStop Color="#ffcccc" Offset="0.9" />
+            </LinearGradientBrush>
+
+        </ResourceDictionary>        
+    </Application.Resources>
+</Application>
